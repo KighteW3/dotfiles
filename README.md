@@ -54,7 +54,10 @@ There are some dependencies that are a "must to" to have my exact configuration,
 
 ## Installation
 
-> cd $HOME
-git clone https://github.com/KighteW3/dotfiles.git\n
-cd dotfiles
-stow --adopt .
+>cd $HOME
+
+>git clone https://github.com/KighteW3/dotfiles.git
+
+>cd dotfiles
+
+>stow --adopt .
