@@ -8,8 +8,15 @@ There are some dependencies that are a "must to" to have my exact configuration,
 
 ### Tools
 
-- i3-wm, i3blocks, i3lock, i3status
-- gtk2, gtk3, gtk4
+- i3
+    - i3-wm
+    - i3blocks
+    - i3lock
+    - i3status
+- gtk
+    - gtk2
+    - gtk3
+    - gtk4
 - xorg (all, including xorg-xinit)
 - tmux
 - neovim (latest)
@@ -31,7 +38,12 @@ There are some dependencies that are a "must to" to have my exact configuration,
 
 ### System
 
-- base, base-devel, linux, linux-headers, linux-firmware
+- Scratch
+    - base
+    - base-devel
+    - linux
+    - linux-headers
+    - linux-firmware
 - amd-ucode
 - sof-firmware
 - linux-firmware-marvell
@@ -39,3 +51,10 @@ There are some dependencies that are a "must to" to have my exact configuration,
 - neovim, vim, vi
 - man-db, man-pages, texinfo
 - grub, grubootmgr
+
+## Installation
+
+> cd $HOME
+git clone https://github.com/KighteW3/dotfiles.git\n
+cd dotfiles
+stow --adopt .
