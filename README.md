@@ -18,6 +18,7 @@ There are some dependencies that are a "must to" to have my exact configuration,
     - gtk3
     - gtk4
 - xorg (all, including xorg-xinit)
+- stow
 - tmux
 - neovim (latest)
     - py-nvim
@@ -44,13 +45,13 @@ There are some dependencies that are a "must to" to have my exact configuration,
     - linux
     - linux-headers
     - linux-firmware
-- amd-ucode
+- amd-ucode (or intel-ucode)
 - sof-firmware
 - linux-firmware-marvell
 - networkmanager
 - neovim, vim, vi
 - man-db, man-pages, texinfo
-- grub, grubootmgr
+- grub (and efigrubmgr if uefi)
 
 ## Installation
 

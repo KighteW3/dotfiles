@@ -45,3 +45,7 @@ if [ -d "$FNM_PATH" ]; then
   export PATH="$FNM_PATH:$PATH"
   eval "`fnm env`"
 fi
+
+# Alias custom
+alias aymisojos="$HOME/redCommand.sh"
+#
