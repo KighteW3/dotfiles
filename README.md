@@ -1,6 +1,6 @@
 # .DOTFILES
 
-This is my personal repo for my .dotfiles configuration, you can fork it or just copy, feel free to be inspirated by my dotfiles.
+This is my personal repo for my .dotfiles configuration, you can fork it or just copy, feel free to be inspirated by it.
 
 ## Dependencies
 
@@ -28,3 +28,14 @@ There are some dependencies that are a "must to" to have my exact configuration,
 - picom
 - feh
 - rofi
+
+### System
+
+- base, base-devel, linux, linux-headers, linux-firmware
+- amd-ucode
+- sof-firmware
+- linux-firmware-marvell
+- networkmanager
+- neovim, vim, vi
+- man-db, man-pages, texinfo
+- grub, grubootmgr
