@@ -1,0 +1,98 @@
+
+# Configuration for Alacritty, the GPU enhanced terminal emulator
+
+[window]
+# Window dimensions (changes require restart)
+dimensions = { columns = 80, lines = 24 }
+
+# Window position (changes require restart)
+position = { x = 0, y = 0 }
+
+# Window padding (changes require restart)
+# padding = { x = 10, y = 10 }
+
+# Spread additional padding evenly around the terminal content.
+dynamic_padding = false
+
+# Window decorations
+decorations = "full"
+
+# Startup Mode (Fullscreen/Maximized/Windowed)
+startup_mode = "Windowed"
+
+# Window opacity (0.0 transparent - 1.0 opaque)
+opacity = 0.9
+
+# Font configuration
+[font]
+# The normal (roman) font face to use.
+normal = { family = "0xProto Nerd Font", style = "Regular" }
+
+# The bold font face
+bold = { family = "0xProto Nerd Font", style = "Bold" }
+
+# The italic font face
+italic = { family = "0xProto Nerd Font", style = "Italic" }
+
+# Point size
+size = 11.0
+
+# Offset
+offset = { x = 0, y = 0 }
+
+# Glyph offset
+glyph_offset = { x = 0, y = 0 }
+
+# Thin stroke support
+# use_thin_strokes = true
+
+# Colors (add your color scheme here)
+[colors]
+# Default colors
+[colors.primary]
+background = '0x1c1c1c'  # Un fondo oscuro estándar
+foreground = '0xf0f0f0'  # Texto blanco brillante
+
+# Normal colors
+[colors.normal]
+black   = '0x1c1c1c'  # Negro más oscuro
+red     = '0xff5555'  # Rojo brillante
+green   = '0x55ff55'  # Verde brillante
+yellow  = '0xffff55'  # Amarillo brillante
+blue    = '0x5555ff'  # Azul brillante
+magenta = '0xff55ff'  # Magenta brillante
+cyan    = '0x55ffff'  # Cian brillante
+white   = '0xf0f0f0'  # Blanco brillante
+
+# Bright colors
+[colors.bright]
+black   = '0x4d4d4d'  # Gris oscuro claro
+red     = '0xff6e6e'  # Rojo más brillante
+green   = '0x69ff94'  # Verde más brillante
+yellow  = '0xffffa5'  # Amarillo más brillante
+blue    = '0x729fcf'  # Azul más brillante
+magenta = '0xff92df'  # Magenta más brillante
+cyan    = '0xa4ffff'  # Cian más brillante
+white   = '0xffffff'  # Blanco muy brillante
+
+# Key bindings (add your custom key bindings here)
+# [key_bindings]
+# [[key_bindings]]
+# key = "V"
+# mods = "Control|Shift"
+# action = "Paste"
+#
+# [[key_bindings]]
+# key = "C"
+# mods = "Control|Shift"
+# action = "Copy"
+#
+# [[key_bindings]]
+# key = "F"
+# mods = "Control|Shift"
+# action = "Search"
+#
+# [[key_bindings]]
+# key = "N"
+# mods = "Control|Shift"
+# action = "SpawnNewInstance"
