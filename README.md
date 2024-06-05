@@ -53,6 +53,17 @@ There are some dependencies that are a "must to" to have my exact configuration,
 - man-db, man-pages, texinfo
 - grub (and efigrubmgr if uefi)
 
+### My personal preferences
+
+- paru
+- rustup
+- blueman-manager
+    - bluetooth or bluez
+- tlp
+- docker
+    - docker-compose
+
+
 ## Installation
 
 >cd $HOME
@@ -61,4 +72,4 @@ There are some dependencies that are a "must to" to have my exact configuration,
 
 >cd dotfiles
 
->stow --adopt .
+>stow .
