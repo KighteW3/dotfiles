@@ -4,7 +4,7 @@ This is my personal repo for my .dotfiles configuration, you can fork it or just
 
 ## Dependencies
 
-There are some dependencies that are a "must to" to have my exact configuration, misc ones are just optional and can be replaced.
+There are some dependencies that are a "must to" to have my exact configuration, misc and personal ones are just optional and can be replaced.
 
 ### Tools
 
@@ -18,14 +18,16 @@ There are some dependencies that are a "must to" to have my exact configuration,
     - gtk3
     - gtk4
 - xorg (all, including xorg-xinit)
+    - xterm
+- sddm
+    - (systemctl enable sddm.service)
 - stow
-- tmux
-- neovim (latest)
-    - py-nvim
-- python3
-    - pip3
-- nodejs
-    - npm
+- blueman-manager
+    - bluetooth
+    - bluez
+- tlp
+- acpi
+    - acpid
 
 ### Misc
 
@@ -45,21 +47,34 @@ There are some dependencies that are a "must to" to have my exact configuration,
     - linux
     - linux-headers
     - linux-firmware
+    - linux-lts
 - amd-ucode (or intel-ucode)
 - sof-firmware
 - linux-firmware-marvell
+- dhcp
+    - dhcpd (systemctl enable dhcpd.service)
 - networkmanager
+    - (systemctl enable NetworkManager.service)
 - neovim, vim, vi
 - man-db, man-pages, texinfo
 - grub (and efigrubmgr if uefi)
+    - dosfstools
+    - mtools
+    - (installation: grub-install --target=x86_64-efi --bootloader-id=grub_uefi --recheck)
+    - (configuration: grub-mkconfig -o /boot/grub/grub.cfg)
+- os-prober
 
 ### My personal preferences
 
+- tmux
+- neovim (latest)
+    - py-nvim
+- python3
+    - pip3
+- nodejs
+    - npm
 - paru
 - rustup
-- blueman-manager
-    - bluetooth or bluez
-- tlp
 - docker
     - docker-compose
 
