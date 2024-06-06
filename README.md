@@ -77,6 +77,9 @@ There are some dependencies that are a "must to" to have my exact configuration,
 - rustup
 - docker
     - docker-compose
+- keycommands
+    - localectl set-x11-keymap (your layout)
+    - exec setxkbmap -layout no
 
 
 ## Installation
