@@ -48,4 +48,14 @@ fi
 
 # Alias custom
 alias aymisojos="$HOME/redCommand.sh"
+alias poweroff="systemctl poweroff"
+alias reboot="systemctl reboot"
+alias suspend="systemctl suspend"
 #
+
+# fnm
+FNM_PATH="/home/emanuel.asandei/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="$FNM_PATH:$PATH"
+  eval "`fnm env`"
+fi
