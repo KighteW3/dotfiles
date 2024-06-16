@@ -1,0 +1,6 @@
+2024/06/13-09:25:19.373 df0 Reusing MANIFEST /home/emanuel.asandei/.config/Postman/Partitions/2f043be6-ac5d-407c-8cc0-bf9a1d255816/Local Storage/leveldb/MANIFEST-000001
+2024/06/13-09:25:19.374 df0 Recovering log #10
+2024/06/13-09:25:19.374 df0 Reusing old log /home/emanuel.asandei/.config/Postman/Partitions/2f043be6-ac5d-407c-8cc0-bf9a1d255816/Local Storage/leveldb/000010.log 
+2024/06/13-10:46:16.031 1ca5 Level-0 table #14: started
+2024/06/13-10:46:16.041 1ca5 Level-0 table #14: 25769 bytes OK
+2024/06/13-10:46:16.045 1ca5 Delete type=0 #10

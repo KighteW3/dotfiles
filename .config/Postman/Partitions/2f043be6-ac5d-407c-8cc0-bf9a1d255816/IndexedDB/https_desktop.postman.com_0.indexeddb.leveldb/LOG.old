@@ -1,0 +1,39 @@
+2024/06/13-09:25:21.861 e3c Reusing MANIFEST /home/emanuel.asandei/.config/Postman/Partitions/2f043be6-ac5d-407c-8cc0-bf9a1d255816/IndexedDB/https_desktop.postman.com_0.indexeddb.leveldb/MANIFEST-000001
+2024/06/13-09:25:21.861 e3c Recovering log #26
+2024/06/13-09:25:21.864 e3c Reusing old log /home/emanuel.asandei/.config/Postman/Partitions/2f043be6-ac5d-407c-8cc0-bf9a1d255816/IndexedDB/https_desktop.postman.com_0.indexeddb.leveldb/000026.log 
+2024/06/13-09:25:21.865 e3c Delete type=2 #25
+2024/06/13-09:25:21.865 e3c Delete type=2 #27
+2024/06/13-09:25:22.003 dd7 Level-0 table #31: started
+2024/06/13-09:25:22.015 dd7 Level-0 table #31: 1180192 bytes OK
+2024/06/13-09:25:22.021 dd7 Delete type=0 #26
+2024/06/13-09:25:23.941 dd7 Compacting 1@0 + 1@1 files
+2024/06/13-09:25:23.958 dd7 Generated table #32@0: 8482 keys, 880154 bytes
+2024/06/13-09:25:23.958 dd7 Compacted 1@0 + 1@1 files => 880154 bytes
+2024/06/13-09:25:23.961 dd7 compacted to: files[ 0 1 1 0 0 0 0 ]
+2024/06/13-10:17:21.437 1b3a Level-0 table #34: started
+2024/06/13-10:17:21.452 1b3a Level-0 table #34: 1098282 bytes OK
+2024/06/13-10:17:21.456 1b3a Delete type=0 #30
+2024/06/13-10:17:21.456 1b3a Delete type=2 #28
+2024/06/13-10:17:21.456 1b3a Delete type=2 #31
+2024/06/13-10:17:22.472 1bd2 Compacting 1@0 + 1@1 files
+2024/06/13-10:17:22.487 1bd2 Generated table #35@0: 9832 keys, 525568 bytes
+2024/06/13-10:17:22.487 1bd2 Compacted 1@0 + 1@1 files => 525568 bytes
+2024/06/13-10:17:22.490 1bd2 compacted to: files[ 0 1 1 0 0 0 0 ]
+2024/06/13-11:07:36.781 2697 Level-0 table #37: started
+2024/06/13-11:07:36.797 2697 Level-0 table #37: 1169051 bytes OK
+2024/06/13-11:07:36.804 2697 Delete type=2 #32
+2024/06/13-11:07:36.804 2697 Delete type=2 #34
+2024/06/13-11:07:36.804 2697 Delete type=0 #33
+2024/06/13-11:07:43.599 21de Compacting 1@0 + 1@1 files
+2024/06/13-11:07:43.653 21de Generated table #38@0: 11260 keys, 953065 bytes
+2024/06/13-11:07:43.653 21de Compacted 1@0 + 1@1 files => 953065 bytes
+2024/06/13-11:07:43.658 21de compacted to: files[ 0 1 1 0 0 0 0 ]
+2024/06/13-11:07:43.658 21de Delete type=2 #37
+2024/06/13-11:07:43.658 21de Delete type=2 #35
+2024/06/13-13:27:10.986 939e Level-0 table #40: started
+2024/06/13-13:27:11.004 939e Level-0 table #40: 1139990 bytes OK
+2024/06/13-13:27:11.008 939e Delete type=0 #36
+2024/06/13-13:27:14.362 939e Compacting 1@0 + 1@1 files
+2024/06/13-13:27:14.381 939e Generated table #41@0: 12779 keys, 1477260 bytes
+2024/06/13-13:27:14.381 939e Compacted 1@0 + 1@1 files => 1477260 bytes
+2024/06/13-13:27:14.385 939e compacted to: files[ 0 1 1 0 0 0 0 ]

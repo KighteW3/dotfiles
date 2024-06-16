@@ -96,3 +96,7 @@ white   = '0xffffff'  # Blanco muy brillante
 # key = "N"
 # mods = "Control|Shift"
 # action = "SpawnNewInstance"
+
+
+[mouse]
+hide_when_typing = true

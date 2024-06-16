@@ -1,0 +1,32 @@
+2024/06/14-09:42:30.636 da2 Reusing MANIFEST /home/emanuel.asandei/.config/Postman/Partitions/2f043be6-ac5d-407c-8cc0-bf9a1d255816/IndexedDB/https_desktop.postman.com_0.indexeddb.leveldb/MANIFEST-000001
+2024/06/14-09:42:30.636 da2 Recovering log #39
+2024/06/14-09:42:30.638 da2 Reusing old log /home/emanuel.asandei/.config/Postman/Partitions/2f043be6-ac5d-407c-8cc0-bf9a1d255816/IndexedDB/https_desktop.postman.com_0.indexeddb.leveldb/000039.log 
+2024/06/14-09:42:30.638 da2 Delete type=2 #40
+2024/06/14-09:42:30.638 da2 Delete type=2 #38
+2024/06/14-09:42:30.772 da2 Level-0 table #44: started
+2024/06/14-09:42:30.782 da2 Level-0 table #44: 1591772 bytes OK
+2024/06/14-09:42:30.786 da2 Delete type=0 #39
+2024/06/14-09:42:32.495 da0 Compacting 1@0 + 1@1 files
+2024/06/14-09:42:32.518 da0 Generated table #45@0: 12631 keys, 1543417 bytes
+2024/06/14-09:42:32.518 da0 Compacted 1@0 + 1@1 files => 1543417 bytes
+2024/06/14-09:42:32.521 da0 compacted to: files[ 0 1 1 0 0 0 0 ]
+2024/06/14-09:57:07.091 ebd Level-0 table #47: started
+2024/06/14-09:57:07.100 ebd Level-0 table #47: 1071894 bytes OK
+2024/06/14-09:57:07.103 ebd Delete type=2 #44
+2024/06/14-09:57:07.103 ebd Delete type=0 #43
+2024/06/14-09:57:07.103 ebd Delete type=2 #41
+2024/06/14-09:57:07.127 f0d Compacting 1@0 + 1@1 files
+2024/06/14-09:57:07.143 f0d Generated table #48@0: 13375 keys, 576024 bytes
+2024/06/14-09:57:07.143 f0d Compacted 1@0 + 1@1 files => 576024 bytes
+2024/06/14-09:57:07.148 f0d compacted to: files[ 0 1 1 0 0 0 0 ]
+2024/06/14-11:30:48.032 247a Level-0 table #50: started
+2024/06/14-11:30:48.064 247a Level-0 table #50: 1218221 bytes OK
+2024/06/14-11:30:48.070 247a Delete type=2 #45
+2024/06/14-11:30:48.070 247a Delete type=2 #47
+2024/06/14-11:30:48.070 247a Delete type=0 #46
+2024/06/14-11:33:10.851 25c2 Compacting 1@0 + 1@1 files
+2024/06/14-11:33:10.907 25c2 Generated table #51@0: 14431 keys, 937366 bytes
+2024/06/14-11:33:10.908 25c2 Compacted 1@0 + 1@1 files => 937366 bytes
+2024/06/14-11:33:10.912 25c2 compacted to: files[ 0 1 1 0 0 0 0 ]
+2024/06/14-11:33:10.912 25c2 Delete type=2 #48
+2024/06/14-11:33:10.912 25c2 Delete type=2 #50
