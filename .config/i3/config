@@ -14,7 +14,7 @@ set $mod Mod1
 bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
 
-# exec --no-startup-id redshift
+exec --no-startup-id aymisojos
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id picom
 exec --no-startup-id polybar
