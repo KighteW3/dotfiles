@@ -28,7 +28,7 @@ There are some dependencies that are a "must to" to have my exact configuration,
 - tlp
 - acpi
     - acpid
-- brightnessctl
+- pavucontrol
 
 ### Misc
 
