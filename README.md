@@ -65,6 +65,12 @@ There are some dependencies that are a "must to" to have my exact configuration,
     - (installation: grub-install --target=x86_64-efi --bootloader-id=grub_uefi --recheck)
     - (configuration: grub-mkconfig -o /boot/grub/grub.cfg)
 - os-prober
+- mtpfs
+- jmtpfs (aur)
+- gvfs-mtp
+- gvfs-gphoto2
+- geoclue
+    - systemctl enable geoclue (if want geolicalization by default)
 
 ### My personal preferences
 
