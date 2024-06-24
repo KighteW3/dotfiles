@@ -29,6 +29,7 @@ There are some dependencies that are a "must to" to have my exact configuration,
 - acpi
     - acpid
 - pavucontrol
+- sudo systemctl enable systemd-timesyncd
 
 ### Misc
 
