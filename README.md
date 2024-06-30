@@ -19,6 +19,8 @@ There are some dependencies that are a "must to" to have my exact configuration,
     - gtk4
 - xorg (all, including xorg-xinit)
     - xterm
+    - xautolock
+    - caffeine-ng
 - sddm
     - (systemctl enable sddm.service)
 - stow
