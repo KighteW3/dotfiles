@@ -40,7 +40,7 @@ PS1='[\u@\h \W]\$ '
 . "$HOME/.cargo/env"
 
 # fnm
-FNM_PATH="/home/kighte/.local/share/fnm"
+FNM_PATH="$HOME/.local/share/fnm"
 if [ -d "$FNM_PATH" ]; then
   export PATH="$FNM_PATH:$PATH"
   eval "`fnm env`"
@@ -52,10 +52,3 @@ alias poweroff="systemctl poweroff"
 alias reboot="systemctl reboot"
 alias suspend="systemctl suspend"
 #
-
-# fnm
-FNM_PATH="/home/emanuel.asandei/.local/share/fnm"
-if [ -d "$FNM_PATH" ]; then
-  export PATH="$FNM_PATH:$PATH"
-  eval "`fnm env`"
-fi
