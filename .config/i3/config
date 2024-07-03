@@ -17,7 +17,6 @@ bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
 
 bindsym $mod+Shift+p exec --no-startup-id nsxiv -r -t ~/Pictures/.
 
-# exec --no-startup-id aymisojos
 # exec --no-startup-id nitrogen --restore
 exec --no-startup-id picom
 exec --no-startup-id polybar
@@ -28,6 +27,8 @@ bindsym Print exec --no-startup-id flameshot gui
 # exec --no-startup-id lxsession
 # exec --no-startup-id blueman-manager
 # exec_always --no-startup-id lxappearance
+exec --no-startup-id redshift -l 40.4165:-3.70256
+
 
 # Definir colores
 # set $bg-color     #222222
