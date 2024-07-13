@@ -51,6 +51,7 @@ glyph_offset = { x = 0, y = 0 }
 # Default colors
 [colors.primary]
 background = '0x1c1c1c'  # Un fondo oscuro estándar
+#background = '0x110505'
 foreground = '0xf0f0f0'  # Texto blanco brillante
 
 # Normal colors
@@ -96,7 +97,6 @@ white   = '0xffffff'  # Blanco muy brillante
 # key = "N"
 # mods = "Control|Shift"
 # action = "SpawnNewInstance"
-
 
 [mouse]
 hide_when_typing = true
