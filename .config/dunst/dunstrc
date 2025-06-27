@@ -81,7 +81,7 @@
     # The transparency of the window.  Range: [0; 100].
     # This option will only work if a compositing window manager is
     # present (e.g. xcompmgr, compiz, etc.). (X11 only)
-    transparency = 0
+    transparency = 3
 
     # Draw a line of "separator_height" pixel height between two
     # notifications.
@@ -93,17 +93,17 @@
     padding = 8
 
     # Horizontal padding.
-    horizontal_padding = 8
+    horizontal_padding = 7
 
     # Padding between text and icon.
     text_icon_padding = 0
 
     # Defines width in pixels of frame around the notification window.
     # Set to 0 to disable.
-    frame_width = 3
+    frame_width = 0
 
     # Defines color of the frame around the notification window.
-    frame_color = "#aaaaaa"
+    frame_color = "#ac0000"
 
     # Size of gap to display between notifications - requires a compositor.
     # If value is greater than 0, separator_height will be ignored and a border
@@ -136,7 +136,7 @@
 
     ### Text ###
 
-    font = Monospace 8
+    font = Roboto-Mono 9
 
     # The spacing between lines.  If the height is smaller than the
     # font height, it will get raised to the font height.
@@ -340,7 +340,7 @@
     #default_icon = /path/to/icon
 
 [urgency_normal]
-    background = "#285577"
+    background = "#111"
     foreground = "#ffffff"
     timeout = 10
     override_pause_level = 30
