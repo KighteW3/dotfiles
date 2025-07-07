@@ -35,11 +35,17 @@ bindsym $mod+q exec --no-startup-id ~/.config/.screenlayout/screen.sh
 exec --no-startup-id bash -i -c 'aymisojos'
 bindsym $mod+Shift+i exec --no-startup-id bash -i -c 'aymisojos'
 
+# Fuck corners in inactive windows
+hide_edge_borders smart
+
+# i3-msg [class=.*] border pixel 1
+default_border pixel 1
+
 
 # Definir colores
 # set $bg-color     #222222
-set $bg-color     #222222
-set $inactive-bg  #000000
+set $bg-color     #dd9900
+set $inactive-bg  #000000aa
 set $text-color   #ffffff
 set $inactive-text #ffffff
 set $urgent-bg    #ff5555
@@ -54,7 +60,7 @@ client.urgent           $urgent-bg $urgent-bg $text-color
 # Configuración para quitar los bordes de las ventanas
 # new_window none
 # new_float none
-for_window [class=".*"] border pixel 1
+for_window [class=".*"] border pixel 0
 
 gaps inner 10
 gaps outer 3
@@ -121,6 +127,17 @@ bindsym $mod+d exec --no-startup-id "rofi -show combi -modes combi -combi-modes 
 # There also is i3-dmenu-desktop which only displays applications shipping a
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
+
+
+# Make the currently focused window a scratchpad
+bindsym $mod+Shift+minus move scratchpad
+
+# Show the first scratchpad window
+bindsym $mod+minus scratchpad show
+
+# Show the sup-mail scratchpad window, if any.
+bindsym mod4+s [title="^Sup ::"] scratchpad show
+
 
 # change focus
 bindsym $mod+j focus left
