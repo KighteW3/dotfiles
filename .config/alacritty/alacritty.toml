@@ -21,7 +21,7 @@ decorations = "full"
 startup_mode = "Windowed"
 
 # Window opacity (0.0 transparent - 1.0 opaque)
-opacity = 0.95
+opacity = 1
 
 # Font configuration
 [font]
