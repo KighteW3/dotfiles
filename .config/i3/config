@@ -36,6 +36,11 @@ bindsym $mod+q exec --no-startup-id ~/.config/.screenlayout/screen-p.sh
 exec --no-startup-id bash -i -c 'aymisojos'
 bindsym $mod+Shift+i exec --no-startup-id bash -i -c 'aymisojos'
 
+# Set touchpad tap on, on i3 boot.
+exec --no-startup-id xinput set-prop "ELAN1200:00 04F3:30BA Touchpad" "libinput Tapping Enabled" 1
+# Find all touchpads (usually contain 'TouchPad' or 'Touchpad') and enable tapping
+exec --no-startup-id bash -c 'xinput list | grep -i "TouchP" | cut -f1 | cut -d"=" -f2 | while read id; do xinput set-prop "$id" "libinput Tapping Enabled" 1; done'
+
 # Fuck corners in inactive windows
 hide_edge_borders smart
 
