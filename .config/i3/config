@@ -50,9 +50,9 @@ default_border pixel 1
 
 # Definir colores
 # set $bg-color     #222222
-set $bg-color     #03D8F3
-set $indicator-color #c62127
-set $inactive-bg  #FCEE0C
+set $bg-color     #f3e600
+set $indicator-color #c5003c
+set $inactive-bg  #55ead4
 set $text-color   #ffffff
 set $inactive-text #ffffff
 set $urgent-bg    #ff5555
