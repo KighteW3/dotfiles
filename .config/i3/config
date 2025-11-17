@@ -23,17 +23,23 @@ exec --no-startup-id picom
 exec --no-startup-id polybar
 exec --no-startup-id caffeine
 exec --no-startup-id xautolock --time 30 --locker 'systemctl suspend'
-bindsym Print exec --no-startup-id flameshot gui
-exec_always --no-startup-id ~/.config/.screenlayout/laptop.sh
+# bindsym Print exec --no-startup-id flameshot gui
+bindsym Print exec --no-startup-id QT_ENABLE_HIGHDPI_SCALING=0 flameshot gui
+exec_always --no-startup-id ~/.config/.screenlayout/laptop-p.sh
 # bindsym $mod+q exec --no-startup-id ~/.config/.screenlayout/screen-p.sh
-bindsym $mod+i exec --no-startup-id ~/.config/.screenlayout/laptop.sh
-bindsym $mod+q exec --no-startup-id ~/.config/.screenlayout/screen.sh
+bindsym $mod+i exec --no-startup-id ~/.config/.screenlayout/laptop-p.sh
+bindsym $mod+q exec --no-startup-id ~/.config/.screenlayout/screen-p.sh
 # exec --no-startup-id /usr/libexec/polkit-gnome-authentication-agent-1 &
 # exec --no-startup-id lxsession
 # exec --no-startup-id blueman-manager
 # exec_always --no-startup-id lxappearance
 exec --no-startup-id bash -i -c 'aymisojos'
 bindsym $mod+Shift+i exec --no-startup-id bash -i -c 'aymisojos'
+
+# Set touchpad tap on, on i3 boot.
+exec --no-startup-id xinput set-prop "ELAN1200:00 04F3:30BA Touchpad" "libinput Tapping Enabled" 1
+# Find all touchpads (usually contain 'TouchPad' or 'Touchpad') and enable tapping
+exec --no-startup-id bash -c 'xinput list | grep -i "TouchP" | cut -f1 | cut -d"=" -f2 | while read id; do xinput set-prop "$id" "libinput Tapping Enabled" 1; done'
 
 # Fuck corners in inactive windows
 hide_edge_borders smart
@@ -44,15 +50,16 @@ default_border pixel 1
 
 # Definir colores
 # set $bg-color     #222222
-set $bg-color     #dd9900
-set $inactive-bg  #000000aa
+set $bg-color     #f3e600
+set $indicator-color #c5003c
+set $inactive-bg  #55ead4
 set $text-color   #ffffff
 set $inactive-text #ffffff
 set $urgent-bg    #ff5555
 set $color-algo #222222
 
 # Colores de bordes
-client.focused          $bg-color $bg-color $text-color
+client.focused          $bg-color $bg-color $text-color $indicator-color
 client.unfocused        $inactive-bg $inactive-bg $inactive-text
 client.focused_inactive $inactive-bg $inactive-bg $inactive-text
 client.urgent           $urgent-bg $urgent-bg $text-color
@@ -60,10 +67,13 @@ client.urgent           $urgent-bg $urgent-bg $text-color
 # Configuración para quitar los bordes de las ventanas
 # new_window none
 # new_float none
-for_window [class=".*"] border pixel 0
+for_window [class=".*"] border pixel 2
 
-gaps inner 10
-gaps outer 3
+# Only show gaps if there is more than one container on the workspace
+# smart_gaps on
+
+# gaps inner 10
+# gaps outer -10
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.

@@ -21,7 +21,7 @@ decorations = "full"
 startup_mode = "Windowed"
 
 # Window opacity (0.0 transparent - 1.0 opaque)
-opacity = 0.95
+opacity = 0.99
 
 # Font configuration
 [font]
@@ -50,9 +50,10 @@ glyph_offset = { x = 0, y = 0 }
 [colors]
 # Default colors
 [colors.primary]
-background = '0x1c1c1c'  # Un fondo oscuro estándar
+background = '0x050505'  # Un fondo oscuro estándar
 #background = '0x110505'
-foreground = '0xf0f0f0'  # Texto blanco brillante
+# foreground = '0xf0f0f0'  # Texto blanco brillante
+foreground = '0x03D8F3'  # Texto blanco brillante
 
 # Normal colors
 [colors.normal]
