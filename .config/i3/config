@@ -45,7 +45,7 @@ exec --no-startup-id bash -c 'xinput list | grep -i "TouchP" | cut -f1 | cut -d"
 hide_edge_borders smart
 
 # i3-msg [class=.*] border pixel 1
-default_border pixel 1
+default_border pixel 2
 
 
 # Definir colores
