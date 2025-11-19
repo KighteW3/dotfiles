@@ -335,15 +335,15 @@
     # Otherwise the "#" and following would be interpreted as a comment.
     background = "#000000"
     foreground = "#55ead4"
-    frame_color = "#f3e600"
+    frame_color = "#55ead4"
     timeout = 10
     # Icon for notifications with low urgency, uncomment to enable
     #default_icon = /path/to/icon
 
 [urgency_normal]
     background = "#000000"
-    foreground = "#f3e600"
-    frame_color = "#55ead4"
+    foreground = "#55ead4"
+    frame_color = "#f3e600"
     timeout = 10
     override_pause_level = 30
     # Icon for notifications with normal urgency, uncomment to enable
