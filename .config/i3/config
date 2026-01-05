@@ -29,6 +29,7 @@ exec_always --no-startup-id ~/.config/.screenlayout/laptop-p.sh
 # bindsym $mod+q exec --no-startup-id ~/.config/.screenlayout/screen-p.sh
 bindsym $mod+i exec --no-startup-id ~/.config/.screenlayout/laptop-p.sh
 bindsym $mod+q exec --no-startup-id ~/.config/.screenlayout/screen-p.sh
+bindsym $mod+Shift+F10 exec --no-startup-id loginctl lock-session
 # exec --no-startup-id /usr/libexec/polkit-gnome-authentication-agent-1 &
 # exec --no-startup-id lxsession
 # exec --no-startup-id blueman-manager
