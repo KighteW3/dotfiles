@@ -1,27 +1,71 @@
-/* =========================
-   GLOBAL SETTINGS
-========================= */
+@define-color void #000000;
+@define-color panel rgba(0, 0, 0, 0.88);
+@define-color cyan #55ead4;
+@define-color magenta #c5003c;
+@define-color burgundy #880425;
+@define-color yellow #f3e600;
+@define-color white #ffffff;
+@define-color urgent #ff5555;
+@define-color muted #8a9199;
+
+@keyframes neon-breathe {
+    from {
+        box-shadow: 0 0 2px alpha(@cyan, 0.35);
+    }
+    to {
+        box-shadow: 0 0 8px alpha(@cyan, 0.8);
+    }
+}
+
+@keyframes magenta-signal {
+    from {
+        box-shadow: 0 0 2px alpha(@magenta, 0.35);
+    }
+    to {
+        box-shadow: 0 0 7px alpha(@magenta, 0.75);
+    }
+}
+
+@keyframes critical-pulse {
+    from {
+        background-color: @burgundy;
+        box-shadow: 0 0 3px alpha(@urgent, 0.55);
+    }
+    to {
+        background-color: @urgent;
+        box-shadow: 0 0 10px alpha(@urgent, 0.95);
+    }
+}
+
 * {
     font-family: "0xProto Nerd Font", "Symbols Nerd Font";
     font-size: 13px;
     font-weight: bold;
     border: none;
-    box-shadow: none;
+    border-radius: 0;
+    min-height: 0;
 }
 
 window#waybar {
     background-color: transparent;
-    color: #ffffff;
+    color: @white;
 }
 
-/* =========================
-   COMMON MODULE STYLE
-========================= */
-#workspaces,
+tooltip {
+    background-color: @void;
+    color: @white;
+    border: 1px solid @cyan;
+    border-radius: 2px;
+}
+
+tooltip label {
+    padding: 4px 7px;
+}
+
 #submap,
-#custom-media,
 #idle_inhibitor,
 #pulseaudio,
+#custom-microphone,
 #network,
 #cpu,
 #memory,
@@ -30,86 +74,322 @@ window#waybar {
 #language,
 #battery,
 #clock,
+#privacy,
+#systemd-failed-units,
 #tray,
 #window,
 #custom-power {
-    margin: 4px 3px;
-    padding: 2px 15px;
-    background-color: #282A2E;
-    border-radius: 8px;
-    min-height: 24px;
+    margin: 4px 2px;
+    padding: 2px 10px;
+    min-height: 26px;
+    background-color: @panel;
+    color: @white;
+    border: 1px solid alpha(@cyan, 0.55);
+    border-radius: 2px;
+    box-shadow: 0 0 3px alpha(@cyan, 0.2);
 }
 
-/* =========================
-   IDLE INHIBITOR (SPECIAL)
-========================= */
-#idle_inhibitor {
-    color: #9da0a2;
-    /* Dim grey when off */
+#submap:hover,
+#idle_inhibitor:hover,
+#pulseaudio:hover,
+#custom-microphone:hover,
+#network:hover,
+#cpu:hover,
+#memory:hover,
+#temperature:hover,
+#backlight:hover,
+#language:hover,
+#battery:hover,
+#clock:hover,
+#privacy:hover,
+#systemd-failed-units:hover,
+#custom-power:hover {
+    color: @void;
+    background-color: @cyan;
+    border-color: @cyan;
+    box-shadow: 0 0 8px alpha(@cyan, 0.8);
 }
 
-#idle_inhibitor.activated {
-    color: #a6e3a1;
-    /* Bright green when keeping PC awake */
-    background-color: #313244;
-}
-
-/* =========================
-   WINDOW (CENTER)
-========================= */
-#window {
-    background-color: #373737;
-    padding: 2px 20px;
-    min-width: 100px;
-    /* Helps stabilize the center */
-}
-
-/* =========================
-   WORKSPACES
-========================= */
 #workspaces {
-    background-color: transparent;
+    margin: 4px 2px;
     padding: 0;
+    background-color: transparent;
 }
 
 #workspaces button {
-    padding: 0 8px;
     margin: 0 2px;
-    background-color: #282A2E;
-    color: #ffffff;
-    border-radius: 6px;
+    padding: 0 8px;
+    min-width: 22px;
+    min-height: 26px;
+    color: @yellow;
+    background-color: @panel;
+    border: 1px solid @burgundy;
+    border-radius: 2px;
+    box-shadow: 0 0 2px alpha(@magenta, 0.25);
+}
+
+#workspaces button.empty {
+    color: alpha(@yellow, 0.55);
 }
 
 #workspaces button.active {
-    background-color: #03D8F3;
-    color: #000000;
+    color: @void;
+    background-color: @cyan;
+    border-color: @cyan;
+    box-shadow: 0 0 8px alpha(@cyan, 0.8);
+    animation: neon-breathe 2.8s ease-in-out infinite alternate;
 }
 
 #workspaces button:hover {
-    background-color: #55EAD4;
-    color: #000000;
+    color: @void;
+    background-color: @yellow;
+    border-color: @yellow;
+    box-shadow: 0 0 8px alpha(@yellow, 0.75);
 }
 
-/* =========================
-   COLORS & STATES
-========================= */
-#network {
-    color: #b4befe;
+#workspaces button.urgent {
+    color: @white;
+    background-color: @burgundy;
+    border-color: @urgent;
+    animation: critical-pulse 0.8s ease-in-out infinite alternate;
 }
 
-#custom-power {
-    color: #FFA500;
+#window {
+    min-width: 120px;
+    padding: 2px 18px;
+    color: @white;
+    background-color: alpha(@burgundy, 0.82);
+    border-color: @magenta;
+    animation: magenta-signal 4s ease-in-out infinite alternate;
 }
 
-#battery.critical:not(.charging) {
-    background-color: #f38ba8;
-    color: #ffffff;
+#window.empty {
+    background-color: @panel;
+    border-color: alpha(@magenta, 0.35);
+    box-shadow: none;
+    animation: none;
 }
 
+#media {
+    margin: 0;
+}
+
+#custom-media-previous,
+#mpris,
+#custom-media-next {
+    margin: 4px 0;
+    padding: 2px 10px;
+    min-height: 26px;
+    background-color: @panel;
+    color: @cyan;
+    border: 1px solid @magenta;
+    border-radius: 0;
+    box-shadow: 0 0 3px alpha(@cyan, 0.2);
+}
+
+#custom-media-previous {
+    margin-left: 2px;
+    min-width: 16px;
+    padding: 2px 6px;
+    border-radius: 2px 0 0 2px;
+}
+
+#mpris {
+    border-left: none;
+    border-right: none;
+}
+
+#custom-media-next {
+    margin-right: 2px;
+    min-width: 16px;
+    padding: 2px 6px;
+    border-radius: 0 2px 2px 0;
+}
+
+#custom-media-previous:hover,
+#mpris:hover,
+#custom-media-next:hover {
+    color: @void;
+    background-color: @cyan;
+    border-color: @cyan;
+    box-shadow: 0 0 8px alpha(@cyan, 0.8);
+}
+
+#custom-media-previous.playing,
+#mpris.playing,
+#custom-media-next.playing {
+    color: @cyan;
+    border-color: @cyan;
+    animation: neon-breathe 3.2s ease-in-out infinite alternate;
+}
+
+#custom-media-previous.paused,
+#mpris.paused,
+#custom-media-next.paused {
+    color: @yellow;
+    border-color: @yellow;
+    box-shadow: 0 0 5px alpha(@yellow, 0.45);
+    animation: none;
+}
+
+#mpris.stopped {
+    margin: 0;
+    padding: 0;
+    min-width: 0;
+    min-height: 0;
+    border: none;
+    box-shadow: none;
+    animation: none;
+}
+
+#submap {
+    color: @yellow;
+    background-color: @burgundy;
+    border-color: @magenta;
+}
+
+#idle_inhibitor {
+    color: @muted;
+}
+
+#idle_inhibitor.activated {
+    color: @void;
+    background-color: @yellow;
+    border-color: @yellow;
+    box-shadow: 0 0 8px alpha(@yellow, 0.75);
+}
+
+#network,
+#pulseaudio,
+#language {
+    color: @cyan;
+}
+
+#custom-microphone.active {
+    color: @cyan;
+}
+
+#custom-microphone {
+    min-width: 16px;
+    padding: 2px 7px;
+}
+
+#custom-microphone.muted {
+    color: @yellow;
+    border-color: @yellow;
+    box-shadow: 0 0 5px alpha(@yellow, 0.45);
+}
+
+#network.disconnected,
+#pulseaudio.muted {
+    color: @yellow;
+    border-color: @yellow;
+}
+
+#cpu,
+#memory,
+#temperature,
+#backlight,
+#battery,
+#clock {
+    color: @yellow;
+    border-color: alpha(@yellow, 0.5);
+    box-shadow: 0 0 3px alpha(@yellow, 0.18);
+}
+
+#privacy {
+    color: @yellow;
+    border-color: @magenta;
+    box-shadow: 0 0 7px alpha(@magenta, 0.65);
+}
+
+#privacy-item {
+    color: @yellow;
+}
+
+#privacy-item.screenshare {
+    color: @magenta;
+}
+
+#privacy-item.audio-in {
+    color: @yellow;
+}
+
+#systemd-failed-units {
+    color: @white;
+    background-color: @burgundy;
+    border-color: @urgent;
+}
+
+#systemd-failed-units.degraded {
+    animation: critical-pulse 0.8s ease-in-out infinite alternate;
+}
+
+#battery.charging,
+#battery.plugged {
+    color: @cyan;
+    border-color: @cyan;
+    box-shadow: 0 0 6px alpha(@cyan, 0.55);
+}
+
+#battery.warning:not(.charging) {
+    color: @void;
+    background-color: @yellow;
+    border-color: @yellow;
+}
+
+#battery.critical:not(.charging),
 #temperature.critical {
-    background-color: #eba0ac;
+    color: @white;
+    border-color: @urgent;
+    animation: critical-pulse 0.8s ease-in-out infinite alternate;
+}
+
+#clock {
+    color: @void;
+    background-color: @yellow;
+    border-color: @yellow;
 }
 
 #tray {
-    padding: 0 10px;
+    padding: 2px 8px;
+    border-color: alpha(@cyan, 0.35);
+}
+
+#custom-power {
+    color: @white;
+    background-color: @burgundy;
+    border-color: @magenta;
+    font-size: 15px;
+}
+
+#custom-power:hover {
+    color: @white;
+    background-color: @magenta;
+    border-color: @magenta;
+    box-shadow: 0 0 9px alpha(@magenta, 0.85);
+}
+
+/* Keep foreground content legible over every bright hover fill. */
+#workspaces button:hover,
+#custom-media-previous:hover,
+#mpris:hover,
+#custom-media-next:hover,
+#submap:hover,
+#idle_inhibitor:hover,
+#pulseaudio:hover,
+#custom-microphone:hover,
+#network:hover,
+#cpu:hover,
+#memory:hover,
+#temperature:hover,
+#backlight:hover,
+#language:hover,
+#battery:hover,
+#clock:hover,
+#privacy:hover,
+#privacy:hover #privacy-item,
+#systemd-failed-units:hover,
+#custom-power:hover {
+    color: @void;
 }

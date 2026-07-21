@@ -14,7 +14,7 @@ decorations = "full"
 # Startup Mode (Fullscreen/Maximized/Windowed)
 startup_mode = "Windowed"
 # Window opacity (0.0 transparent - 1.0 opaque)
-opacity = 0.99
+opacity = 0.9
 
 # Font configuration
 [font]

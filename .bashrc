@@ -51,6 +51,7 @@ alias aymisojos="$HOME/redCommand.sh"
 alias poweroff="systemctl poweroff"
 alias reboot="systemctl reboot"
 alias suspend="systemctl suspend"
+alias hibernate="systemctl hibernate"
 alias get_esprs='. $HOME/export-esp.sh'
 #
 
