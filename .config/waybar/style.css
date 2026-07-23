@@ -17,6 +17,27 @@
     }
 }
 
+@keyframes music-pulse {
+    0% {
+        box-shadow: 0 0 3px alpha(@cyan, 0.35);
+    }
+    18% {
+        box-shadow: 0 0 10px alpha(@cyan, 0.95), 0 0 4px alpha(@magenta, 0.65);
+    }
+    32% {
+        box-shadow: 0 0 4px alpha(@magenta, 0.45);
+    }
+    48% {
+        box-shadow: 0 0 9px alpha(@magenta, 0.9), 0 0 4px alpha(@cyan, 0.6);
+    }
+    70% {
+        box-shadow: 0 0 3px alpha(@cyan, 0.3);
+    }
+    100% {
+        box-shadow: 0 0 3px alpha(@cyan, 0.35);
+    }
+}
+
 @keyframes magenta-signal {
     from {
         box-shadow: 0 0 2px alpha(@magenta, 0.35);
@@ -72,6 +93,7 @@ tooltip label {
 #temperature,
 #backlight,
 #language,
+#custom-capslock,
 #battery,
 #clock,
 #privacy,
@@ -99,6 +121,7 @@ tooltip label {
 #temperature:hover,
 #backlight:hover,
 #language:hover,
+#custom-capslock:hover,
 #battery:hover,
 #clock:hover,
 #privacy:hover,
@@ -220,25 +243,16 @@ tooltip label {
 #custom-media-next.playing {
     color: @cyan;
     border-color: @cyan;
-    animation: neon-breathe 3.2s ease-in-out infinite alternate;
+    animation: music-pulse 1.15s ease-in-out infinite;
 }
 
 #custom-media-previous.paused,
 #mpris.paused,
-#custom-media-next.paused {
+#custom-media-next.paused,
+#mpris.stopped {
     color: @yellow;
     border-color: @yellow;
     box-shadow: 0 0 5px alpha(@yellow, 0.45);
-    animation: none;
-}
-
-#mpris.stopped {
-    margin: 0;
-    padding: 0;
-    min-width: 0;
-    min-height: 0;
-    border: none;
-    box-shadow: none;
     animation: none;
 }
 
@@ -263,6 +277,21 @@ tooltip label {
 #pulseaudio,
 #language {
     color: @cyan;
+}
+
+#custom-capslock {
+    min-width: 14px;
+    padding: 2px 6px;
+    color: @yellow;
+    border-color: @yellow;
+    box-shadow: 0 0 6px alpha(@yellow, 0.55);
+}
+
+#custom-capslock:hover {
+    color: @void;
+    background-color: @yellow;
+    border-color: @yellow;
+    box-shadow: 0 0 9px alpha(@yellow, 0.85);
 }
 
 #custom-microphone.active {
@@ -385,6 +414,7 @@ tooltip label {
 #temperature:hover,
 #backlight:hover,
 #language:hover,
+#custom-capslock:hover,
 #battery:hover,
 #clock:hover,
 #privacy:hover,
